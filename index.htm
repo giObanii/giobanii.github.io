@@ -60,6 +60,7 @@
     <div class="bgd-shadow"></div>
     <!--    <pre>avatar_extra: {{view.code.avatar_extra | json}}</pre>-->
     <!--    <pre>welcome_extra: {{view.code.welcome_extra | json}}</pre>-->
+	
     <div class="page-home page">
         <div class="vcard-header">
             <div class="vcard-header-wrapper">
@@ -79,11 +80,14 @@
             <div class="vcard-body-wrapper">
                 <div class="vcard-body">
                     <div id="devent-details">
+						
    <a ng-href="https://wa.me/5217772145887" target="_blank" class="channel-container ng-scope" id="channel-item-WhatsApp" ng-click="loadDemo ? callAction($event,'channelAction') : ''" ng-repeat="channel in view.code.channels track by $index" href="https://wa.me/5217772145887">
         <div class="table-cell-middle1 pl-55 pos-relative">
+			
             <div class="channel-bgd-whatsapp" ng-style="{top: channel.label ? 'calc(50% - 20px)' : 'calc(50% - 15px)'}" style="top: calc(50% - 20px);">
                 <i ng-if="channel.name != 'Snapchat'" class="icon-social-whatsapp"></i>
             </div>
+	
             <div class="channel-prop-container" ng-class="{'pull-left': channel.link &amp;&amp; channel.label &amp;&amp; channel.name == 'Website', 'pull-left mt-101 height-301': channel.link &amp;&amp; !channel.label &amp;&amp; channel.name == 'Website', 'pt-10': !channel.label}">
 
                 <span ng-if="channel.name != 'Website'" class="ng-scope">
@@ -94,9 +98,12 @@
                         Envianos un mensaje
                     </div>
                 </span>
+
             </div>
+	
         </div>
-    </a><!-- end ngRepeat: channel in view.code.channels track by $index --><a ng-href="http://m.me/GiStoreAcapulco" target="_blank" class="channel-container ng-scope" id="channel-item-Messenger" ng-click="loadDemo ? callAction($event,'channelAction') : ''" ng-repeat="channel in view.code.channels track by $index" href="http://m.me/GiStoreAcapulco">
+    </a>
+	<a ng-href="http://m.me/GiStoreAcapulco" target="_blank" class="channel-container ng-scope" id="channel-item-Messenger" ng-click="loadDemo ? callAction($event,'channelAction') : ''" ng-repeat="channel in view.code.channels track by $index" href="http://m.me/GiStoreAcapulco">
         <div class="table-cell-middle1 pl-55 pos-relative">
             <div class="channel-bgd-messenger" ng-style="{top: channel.label ? 'calc(50% - 20px)' : 'calc(50% - 15px)'}" style="top: calc(50% - 20px);">
                 <!-- ngIf: channel.name != 'Snapchat' --><i ng-if="channel.name != 'Snapchat'" class="icon-social-messenger"></i><!-- end ngIf: channel.name != 'Snapchat' -->
