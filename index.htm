@@ -422,46 +422,6 @@ YII_CSRF_TOKEN='65cae196892f4bba49b228b00adae134114dff30';
         }
     });
 
-    /**
-     * Directive
-     *
-     * When image is loaded fadeout welcome screen
-     * */
-    app.directive('imageonload', ['qr', function (qr) {
-        return {
-            restrict: 'A',
-            link: function (scope, element, attrs) {
-                element.bind('load', function () {
-                    $("#welcomeImg").fadeIn(1000);
-                    window.setTimeout(function () {
-                        $(".loading-welcome.welcome-screen").fadeOut();
-                        scope.welcomeScreenScrollWindow++;
-                        if (scope.welcomeScreenScrollWindow == 1) {
-                            qr.scrollFromBottomtoTop(scope.loadDemo)
-                        }
-                    }, 2000);
-                });
-                element.bind('error', function () {
-                });
-            }
-        };
-    }]);
-    //Override the base preview controller
-    app.controller('ComplexController', function ($scope, $controller, $sce, $rootScope, $filter, previewService, $window) {
-
-            $scope.welcomeScreenScrollWindow = 0;
-            /**
-             * Get channel name from channel item
-             *
-             * @param channel
-             * */
-            $scope.getChannelLink = function (channel) {
-                if (!$scope.loadDemo) {
-                    return $filter('prefixChannel')(channel.link, channel.name);
-                }
-                return '#channel-item-' + channel.name;
-            };
-
             /**
              * Get channel name or link to the channel based on channel info
              *
