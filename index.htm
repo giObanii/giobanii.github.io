@@ -389,39 +389,6 @@ YII_CSRF_TOKEN='65cae196892f4bba49b228b00adae134114dff30';
         };
     }]);
 
-    /**
-     * Return domain of input
-     * */
-    app.filter('domain', function () {
-        return function (input) {
-            if (input.indexOf('://') >= 0) {
-                return input.split('/')[2]
-            }
-            return input.split('/')[0]
-        };
-    });
-
-    /**
-     * The QR service for the app.
-     * */
-    app.service('qr', function () {
-        /**
-         * Scroll page from buttom to top
-         * */
-        this.scrollFromBottomtoTop = function (loadDemo) {
-            setTimeout(function () {
-                if (loadDemo == true) {
-                    $("html, body").animate({
-                        scrollTop: $('.channel-container:last-child').offset().top
-                    }, 0)
-                    ;$("html, body").animate({
-                        scrollTop: 0
-                    }, 1000);
-                }
-            }, 0)
-        }
-    });
-
             /**
              * Get channel name or link to the channel based on channel info
              *
