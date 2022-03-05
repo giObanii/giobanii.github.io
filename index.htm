@@ -2,8 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" itemscope="" itemtype="http://qrco.de/C0ntact?trackSharing=1"><head>
 <meta http-equiv="content-type" content="text/html; charset=UTF-8"><style type="text/css">@charset "UTF-8";[ng\:cloak],[ng-cloak],[data-ng-cloak],[x-ng-cloak],.ng-cloak,.x-ng-cloak,.ng-hide:not(.ng-hide-animate){display:none !important;}ng\:form{display:block;}.ng-animate-shim{visibility:hidden;}.ng-anchor{position:absolute;}</style>
     <link rel="stylesheet" type="text/css" href="/pagina/template_normal.min.css">
-<script type="text/javascript">
-	
+
 <title>Página de Redes Sociales</title>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -60,7 +59,6 @@
     <div class="bgd-shadow"></div>
     <!--    <pre>avatar_extra: {{view.code.avatar_extra | json}}</pre>-->
     <!--    <pre>welcome_extra: {{view.code.welcome_extra | json}}</pre>-->
-	
     <div class="page-home page">
         <div class="vcard-header">
             <div class="vcard-header-wrapper">
@@ -80,30 +78,27 @@
             <div class="vcard-body-wrapper">
                 <div class="vcard-body">
                     <div id="devent-details">
-						
-   <a ng-href="https://wa.me/5217772145887" target="_blank" class="channel-container ng-scope" id="channel-item-WhatsApp" ng-click="loadDemo ? callAction($event,'channelAction') : ''" ng-repeat="channel in view.code.channels track by $index" href="https://wa.me/5217772145887">
+    <!-- ngIf: view.code.avatar == '' && !view.code.customHeaderImage && view.code.teaser -->
+    <!-- ngRepeat: channel in view.code.channels track by $index --><a ng-href="https://wa.me/5217772145887" target="_blank" class="channel-container ng-scope" id="channel-item-WhatsApp" ng-click="loadDemo ? callAction($event,'channelAction') : ''" ng-repeat="channel in view.code.channels track by $index" href="https://wa.me/5217772145887">
         <div class="table-cell-middle1 pl-55 pos-relative">
-			
             <div class="channel-bgd-whatsapp" ng-style="{top: channel.label ? 'calc(50% - 20px)' : 'calc(50% - 15px)'}" style="top: calc(50% - 20px);">
-                <i ng-if="channel.name != 'Snapchat'" class="icon-social-whatsapp"></i>
+                <!-- ngIf: channel.name != 'Snapchat' --><i ng-if="channel.name != 'Snapchat'" class="icon-social-whatsapp"></i><!-- end ngIf: channel.name != 'Snapchat' -->
+                <!-- ngIf: channel.name == 'Snapchat' -->
             </div>
-	
             <div class="channel-prop-container" ng-class="{'pull-left': channel.link &amp;&amp; channel.label &amp;&amp; channel.name == 'Website', 'pull-left mt-101 height-301': channel.link &amp;&amp; !channel.label &amp;&amp; channel.name == 'Website', 'pt-10': !channel.label}">
 
-                <span ng-if="channel.name != 'Website'" class="ng-scope">
+                <!-- ngIf: channel.name == 'Website' -->
+                <!-- ngIf: channel.name != 'Website' --><span ng-if="channel.name != 'Website'" class="ng-scope">
                     <div class="channel-name ng-binding mb-5" ng-class="{'mb-5': channel.label}">
                     WhatsApp
                     </div>
                     <div class="channel-label ng-binding">
                         Envianos un mensaje
                     </div>
-                </span>
-
+                </span><!-- end ngIf: channel.name != 'Website' -->
             </div>
-	
         </div>
-    </a>
-	<a ng-href="http://m.me/GiStoreAcapulco" target="_blank" class="channel-container ng-scope" id="channel-item-Messenger" ng-click="loadDemo ? callAction($event,'channelAction') : ''" ng-repeat="channel in view.code.channels track by $index" href="http://m.me/GiStoreAcapulco">
+    </a><!-- end ngRepeat: channel in view.code.channels track by $index --><a ng-href="http://m.me/GiStoreAcapulco" target="_blank" class="channel-container ng-scope" id="channel-item-Messenger" ng-click="loadDemo ? callAction($event,'channelAction') : ''" ng-repeat="channel in view.code.channels track by $index" href="http://m.me/GiStoreAcapulco">
         <div class="table-cell-middle1 pl-55 pos-relative">
             <div class="channel-bgd-messenger" ng-style="{top: channel.label ? 'calc(50% - 20px)' : 'calc(50% - 15px)'}" style="top: calc(50% - 20px);">
                 <!-- ngIf: channel.name != 'Snapchat' --><i ng-if="channel.name != 'Snapchat'" class="icon-social-messenger"></i><!-- end ngIf: channel.name != 'Snapchat' -->
