@@ -41,6 +41,13 @@
         <div class="loading-bar indeterminate" ng-style="{'background-color': view.code.color1 || view.color1}" style="background-color: rgb(69, 90, 100);"></div>
     </div>
     <div class="helper"></div>
+    <img id="welcomeImg" imageonload="" ng-src="//qrcgcustomers.s3-eu-west-1.amazonaws.com/account17929606/24585093_1.png?0.9085793318547434" ng-style="{
+            'max-width': view.code.welcome_extra.zoom *2 || view.welcome_extra.zoom *2 + 'px',
+            'max-height': view.code.welcome_extra.zoom *2 || view.welcome_extra.zoom *2 + 'px',
+            'animation-iteration-count' :  view.showPreview == 'infinite' ? 'infinite' : '',
+            'animation-direction' :  view.showPreview == 'infinite' ? 'alternate' : ''
+            }" src="/pagina/24585093_1.png" style="max-width: 100px; max-height: 100px; display: inline;">
+</div>
 
 <div class="vcard-template style2" id="rootElement">
     <!-- ngIf: !view.code.avatar && !view.code.customHeaderImage -->
