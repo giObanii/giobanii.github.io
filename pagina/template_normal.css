@@ -10,11 +10,11 @@ div[class^='channel-bgd-']{border-radius:50%;width:40px;height:40px;float:left;t
 
 @font-face {
   font-family: "solution-dsocial-icons";
-  src:url("fonts/solution-dsocial-icons.eot");
-  src:url("fonts/solution-dsocial-icons.eot?#iefix") format("embedded-opentype"),
-    url("fonts/solution-dsocial-icons.woff") format("woff"),
-    url("fonts/solution-dsocial-icons.ttf") format("truetype"),
-    url("fonts/solution-dsocial-icons.svg#solution-dsocial-icons") format("svg");
+  src:url("https://qrco.de/css/build/pages/dsocial/fonts/solution-dsocial-icons.eot");
+  src:url("https://qrco.de/css/build/pages/dsocial/fonts/solution-dsocial-icons.eot?#iefix") format("embedded-opentype"),
+    url("https://qrco.de/css/build/pages/dsocial/fonts/solution-dsocial-icons.woff") format("woff"),
+    url("https://qrco.de/css/build/pages/dsocial/fonts/solution-dsocial-icons.ttf") format("truetype"),
+    url("https://qrco.de/css/build/pages/dsocial/fonts/solution-dsocial-icons.svg#solution-dsocial-icons") format("svg");
   font-weight: normal;
   font-style: normal;
 
