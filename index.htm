@@ -36,28 +36,15 @@
     <meta itemprop="name" content="Conéctate con nosotros en las redes sociales">
     <meta itemprop="description" content="Síguenos y recibe actualizaciones en tu red social favorita.">
     <meta itemprop="image" content="img/24584971_1.png">
-<script type="text/javascript" src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-<script type="text/javascript">
-/*<![CDATA[*/
-   /**
-     * Directive
-     *
-     * When image is loaded fadeout welcome screen
-     * */
-$(window).load(function() {
-$("#welcomeImg").fadeIn(1000);		
-$(".loading-welcome").fadeOut(200);	
-});
-/*]]>*/
-</script>
 </head>
 <body id="dsocial-body" class="WhiteTheme" style="background-color:  #090909;">
-<div class="loading-welcome active welcome-screen" style="background-color: rgb(255, 255, 255);">
+	
+<div class="loading-welcome active welcome-screen" style="background-color: rgb(255, 255, 255); display: none;">
     <div class="progress">
         <div class="loading-bar indeterminate" style="background-color: rgb(69, 90, 100);"></div>
     </div>
     <div class="helper"></div>
-    <img id="welcomeImg" imageonload="" src="img/24585093_1.png" style="max-width: 100px; max-height: 100px; display: inline;">
+    <img id="welcomeImg" src="img/24585093_1.png" style="max-width: 100px; max-height: 100px; display: inline;" />
 </div>
 	
 <div class="vcard-template style2" id="rootElement">
@@ -174,7 +161,12 @@ $(".loading-welcome").fadeOut(200);
 
     </div>
 </div></div>
-
 </div></div>
-	
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script type="text/javascript">
+$(window).load(function() {
+$(".loading-welcome").fadeOut("slow");
+$("#welcomeImg").fadeIn(1000);
+});
+</script>
 </body></html>
