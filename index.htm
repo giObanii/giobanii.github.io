@@ -36,11 +36,23 @@
     <meta itemprop="name" content="Conéctate con nosotros en las redes sociales">
     <meta itemprop="description" content="Síguenos y recibe actualizaciones en tu red social favorita.">
     <meta itemprop="image" content="img/24584971_1.png">
-
+<script type="text/javascript" src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script type="text/javascript">
+/*<![CDATA[*/
+   /**
+     * Directive
+     *
+     * When image is loaded fadeout welcome screen
+     * */
+$(window).load(function() {
+$("#welcomeImg").fadeIn(1000);		
+$(".loading-welcome").fadeOut(200);	
+});
+/*]]>*/
+</script>
 </head>
 <body id="dsocial-body" class="WhiteTheme" style="background-color:  #090909;">
-	
-<div class="loading-welcome active welcome-screen" style="background-color: rgb(255, 255, 255); display: none;">
+<div class="loading-welcome active welcome-screen" style="background-color: rgb(255, 255, 255);">
     <div class="progress">
         <div class="loading-bar indeterminate" style="background-color: rgb(69, 90, 100);"></div>
     </div>
@@ -164,23 +176,5 @@
 </div></div>
 
 </div></div>
-
-<script type="text/javascript" src="js/jquery-3.6.0.minjs"></script>
-<script type="text/javascript">
-/*<![CDATA[*/
-   /**
-     * Directive
-     *
-     * When image is loaded fadeout welcome screen
-     * */
-  $(window).load(function() {
-$("#welcomeImg").fadeIn(1000);
- window.setTimeout(function () {			
-$(".loading-welcome.welcome-screen").fadeOut();
-});		
-});
-
-/*]]>*/
-</script>
 	
 </body></html>
