@@ -5,12 +5,18 @@
 <link rel="stylesheet" type="text/css" href="css/template_normal.min.css">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
 <script type="text/javascript">
-$(window).load(function() {
+$(window).load(function() {	
 $("#welcomeImg").fadeIn(1000);
  window.setTimeout(function () {			
-$(".loading-welcome.welcome-screen").fadeOut(2000);
-});		
-});
+$(".loading-welcome.welcome-screen").fadeOut();
+	 scope.welcomeScreenScrollWindow++;
+	 if (scope.welcomeScreenScrollWindow == 1) {
+       qr.scrollFromBottomtoTop(scope.loadDemo)
+         }
+    }, 2500);
+	element.bind('error', function () {
+                });
+});	
 </script>
 <title>Gi Store Redes Sociales</title>
     <meta charset="utf-8">
@@ -50,7 +56,7 @@ $(".loading-welcome.welcome-screen").fadeOut(2000);
         <div class="loading-bar indeterminate" style="background-color: rgb(69, 90, 100);"></div>
     </div>
     <div class="helper"></div>
-    <img id="welcomeImg" src="img/24585093_1.png" style="max-width: 100px; max-height: 100px; display: ;" />
+    <img id="welcomeImg" imageonload="" src="img/24585093_1.png" style="max-width: 100px; max-height: 100px; display: ;" />
 </div>
 	
 <div class="vcard-template style2" id="rootElement">
