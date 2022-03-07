@@ -6,17 +6,17 @@
 	</style>
     <link rel="stylesheet" type="text/css" href="css/template_normal.min.css">
 
-<title>Página de Redes Sociales</title>
+<title>Gi Store Redes Sociales</title>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <meta name="robots" content="noindex, nofollow">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <link rel="shortcut icon" href="https://qrco.de/img/favicon/favicon.ico" type="image/x-icon">
-        <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
 
     <!--Facebook meta-->
-    <meta property="og:url" content="http://qrco.de/C0ntact?trackSharing=1">
+    <meta property="og:url" content="http://giobanii.github.io">
     <meta property="og:title" content="Conéctate con nosotros en las redes sociales">
     <meta property="og:description" content="Síguenos y recibe actualizaciones en tu red social favorita.">
     <meta property="og:image" content="img/24584971_1.png">
@@ -39,7 +39,20 @@
 
 </head>
 <body id="dsocial-body" class="WhiteTheme" style="background-color:  #090909;">
-
+	
+<div class="loading-welcome active welcome-screen" style="background-color: rgb(255, 255, 255); display: none;">
+    <div class="progress">
+        <div class="loading-bar indeterminate" style="background-color: rgb(69, 90, 100);"></div>
+    </div>
+    <div class="helper"></div>
+    <img id="welcomeImg" imageonload="img/24585093_1.png" ng-src="img/24585093_1.png" ng-style="{
+            'max-width': view.code.welcome_extra.zoom *2 || view.welcome_extra.zoom *2 + 'px',
+            'max-height': view.code.welcome_extra.zoom *2 || view.welcome_extra.zoom *2 + 'px',
+            'animation-iteration-count' :  view.showPreview == 'infinite' ? 'infinite' : '',
+            'animation-direction' :  view.showPreview == 'infinite' ? 'alternate' : ''
+            }" src="img/24585093_1.png" style="max-width: 100px; max-height: 100px; display: inline;">
+</div>
+	
 <div class="vcard-template style2" id="rootElement">
 <div class="ng-scope">
         <div class="hidden-sm hidden-xs">
@@ -153,8 +166,38 @@
 </div>
 
     </div>
-</div>
+</div></div>
 
+</div></div>
 
-
+<script type="text/javascript" src="P%C3%A1gina%20de%20Redes%20Sociales%20Archivos/jquery-3.6.0.minjs"></script>
+<script type="text/javascript" src="P%CP%CCangular.rendering.min3%A1gina%20de%20Redes%20Sociales%20Archivos/jquery-3.6.0.minjs"></script>script type="text/javascript" src="P%C3%A1gina%20de%20Redes%20Sociales%20Archivos/angular.js"></script>
+<script type="text/javascript">
+/*<![CDATA[*/
+   /**
+     * Directive
+     *
+     * When image is loaded fadeout welcome screen
+     * */
+    app.directive('imageonload', ['qr', function (qr) {
+        return {
+            restrict: 'A',
+            link: function (scope, element, attrs) {
+                element.bind('load', function () {
+                    $("#welcomeImg").fadeIn(1000);
+                    window.setTimeout(function () {
+                        $(".loading-welcome.welcome-screen").fadeOut();
+                        scope.welcomeScreenScrollWindow++;
+                        if (scope.welcomeScreenScrollWindow == 1) {
+                            qr.scrollFromBottomtoTop(scope.loadDemo)
+                        }
+                    }, 2000);
+                });
+                element.bind('error', function () {
+                });
+            }
+        };
+    }]);
+/*]]>*/
+</script>
 </body></html>
