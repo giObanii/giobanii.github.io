@@ -165,8 +165,7 @@
 
 </div></div>
 
-<script type="text/javascript" src="P%C3%A1gina%20de%20Redes%20Sociales%20Archivos/jquery-3.6.0.minjs"></script>
-<script type="text/javascript" src="P%CP%CCangular.rendering.min3%A1gina%20de%20Redes%20Sociales%20Archivos/jquery-3.6.0.minjs"></script>script type="text/javascript" src="P%C3%A1gina%20de%20Redes%20Sociales%20Archivos/angular.js"></script>
+<script type="text/javascript" src="js/jquery-3.6.0.minjs"></script>
 <script type="text/javascript">
 /*<![CDATA[*/
    /**
@@ -174,25 +173,14 @@
      *
      * When image is loaded fadeout welcome screen
      * */
-    app.directive('imageonload', ['qr', function (qr) {
-        return {
-            restrict: 'A',
-            link: function (scope, element, attrs) {
-                element.bind('load', function () {
-                    $("#welcomeImg").fadeIn(1000);
-                    window.setTimeout(function () {
-                        $(".loading-welcome.welcome-screen").fadeOut();
-                        scope.welcomeScreenScrollWindow++;
-                        if (scope.welcomeScreenScrollWindow == 1) {
-                            qr.scrollFromBottomtoTop(scope.loadDemo)
-                        }
-                    }, 2000);
-                });
-                element.bind('error', function () {
-                });
-            }
-        };
-    }]);
+  $(window).load(function() {
+$("#welcomeImg").fadeIn(1000);
+ window.setTimeout(function () {			
+$(".loading-welcome.welcome-screen").fadeOut();
+});		
+});
+
 /*]]>*/
 </script>
+	
 </body></html>
