@@ -6,8 +6,10 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
 <script type="text/javascript">
 $(window).load(function() {
-$("#loading-welcome").fadeOut(1000);
 $("#welcomeImg").fadeIn(1000);
+ window.setTimeout(function () {			
+$(".loading-welcome.welcome-screen").fadeOut(2000);
+});		
 });
 </script>
 <title>Gi Store Redes Sociales</title>
@@ -43,12 +45,12 @@ $("#welcomeImg").fadeIn(1000);
 </head>
 <body id="dsocial-body" class="WhiteTheme" style="background-color:  #090909;">
 	
-<div id="loading-welcome" class="loading-welcome welcome-screen">
+<div id="loading-welcome" class="loading-welcome active welcome-screen" style="display: block">
     <div class="progress">
         <div class="loading-bar indeterminate" style="background-color: rgb(69, 90, 100);"></div>
     </div>
     <div class="helper"></div>
-    <img id="welcomeImg" src="img/24585093_1.png" style="max-width: 100px; max-height: 100px; display: inline;" />
+    <img id="welcomeImg" src="img/24585093_1.png" style="max-width: 100px; max-height: 100px; display: ;" />
 </div>
 	
 <div class="vcard-template style2" id="rootElement">
